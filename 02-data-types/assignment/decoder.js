@@ -4,6 +4,7 @@
  */
 
  // Your code here
+ var code = []
 
  /**
   * Question 2
@@ -14,6 +15,9 @@
   */
 
 // Your code here
+code = ['x', 'u', 's', 'a', 'e', 'l', 'p', 'e', 'e', 'n',
+ 'i', 't', 'l', 'a', 'v', 'o', 'x', 'e', 'r',
+'o', 'm', 'c']
 
 /**
  * Question 3
@@ -21,14 +25,16 @@
  * Hint: You may need to look up a method we haven't talked about.
  */
 
-// Your code here
-
+// Your code her
+code.pop()
+code.shift()
 /**
  * Question 4
  * Reverse the array.
  */
 
 // Your code here
+code.reverse()
 
 /**
  * Question 5
@@ -37,6 +43,7 @@
  */
 
 // Your code here
+code[code.length-1] = 'e'
 
 /**
  * Question 6
@@ -45,7 +52,8 @@
  */
 
 // Your code here
-
+code[4] = ' '
+code[13] = ' '
 /**
  * Question 7
  * Join the array with an empty String in between each character and log the
@@ -53,3 +61,4 @@
  */
 
  // Your code here
+ console.log(code.join(" "));
