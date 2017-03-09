@@ -26,7 +26,7 @@
 // }
 //
 // myFirstFunction
-// myFirstFunction()
+ // myFirstFunction()
 
 
 // ----------
@@ -42,7 +42,12 @@
   2. Using Parameters and Arguments
 
 */
-
+// function sayThanks(name) {
+//   console.log("Thanks " + name);
+// }
+//
+// sayThanks('Obama')
+// sayThanks('Michelle')
 
 // // ----------
 // var number = 0
@@ -110,7 +115,7 @@
 // function addThree( ) {
 //   console.log( a + 3 )
 // }
-
+// console.log(a);
 
 
 
@@ -128,6 +133,8 @@
 // function myFunction() {
 //   console.log( a )
 // }
+//
+// myFunction()
 
 // Scope Example 4:
 // var a = 1
@@ -165,12 +172,12 @@
 */
 
 
-// Functions as variables
-var myFunction = function () {
-  console.log( 'myFunction variable' )
-}
-
-myFunction()
+//Functions as variables
+// var myFunction = function () {
+//   console.log( 'myFunction variable' )
+// }
+//
+// myFunction()
 
 
 /*
@@ -181,9 +188,9 @@ myFunction()
 
 
 // Pure functions
-function isCurrentYearLeapYear() {
-
-   const year = new Date().getFullYear()
+ var currentYear = new Date().getFullYear()
+ 
+function isCurrentYearLeapYear(year) {
 
    if(year % 4 !== 0) {
      return false

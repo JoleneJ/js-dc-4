@@ -20,8 +20,28 @@ deckOfCards.
 
 */
 
+function createDeck(suits, ranks) {
 
+  var suits = ['hearts', 'clubs', 'spades', 'diamonds']
+  var ranks = ['ace', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'jack', 'queen', 'king']
 
+  var myDeckOfCards = []
+  var i = 0
+  // for (var i = 0; i < 53; i++) {
+    for(rank in ranks){
+      for (var suit in suits) {
+        myDeckOfCards[i] = ranks[rank] + ' of ' + suits[suit]
+        console.log(i);
+        console.log(myDeckOfCards[i]);
+        i++
+      }
+    }
+  //}
+  return myDeckOfCards
+}
+
+var deckOfCards = createDeck()
+console.log(deckOfCards);
 
 /*
 
@@ -31,6 +51,15 @@ card from deckOfCards whenever it is called.
 Don't worry about removing the card from deckOfCards.
 
 */
+function getRandomCard(deckOfCards) {
+  var random = Math.floor((Math.random() * 52) + 1 )
+  var randomCard = deckOfCards[random]
+  console.log(randomCard);
+  return randomCard
+}
+
+getRandomCard(deckOfCards)
+
 
 
 
@@ -48,7 +77,20 @@ the cards as an array.
 
 */
 
+function dealHand(num) {
+  var array = []
+  if(num === 0){
+    return getRandomCard(deckOfCards)
+  }else {
+    for (var i = 0; i < num; i++) {
+      array[i] = getRandomCard(deckOfCards)
+    }
+    return array
+  }
+}
 
+var hand = dealHand(0)
+console.log(hand);
 
 
 /*
@@ -59,7 +101,14 @@ initialize them as empty arrays.
 Deal both playerOneCards and playerTwoCards 7 cards each.
 
 */
+var playerOneCards = []
+var playerTwoCards = []
 
+playerOneCards = dealHand(7)
+playerTwoCards = dealHand(7)
+
+console.log(playerOneCards);
+console.log(playerTwoCards);
 
 
 
@@ -70,7 +119,13 @@ array and prints each card.
 
 */
 
+function showHand(playerCards) {
+  for (var i = 0; i < playerCards.length; i++) {
+    console.log('showHand: ', playerCards[i]);
+  }
+}
 
+showHand(playerOneCards)
 
 
 /*
