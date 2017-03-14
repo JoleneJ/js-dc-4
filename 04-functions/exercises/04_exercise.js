@@ -22,16 +22,13 @@ deckOfCards.
 
 function createDeck(suits, ranks) {
 
-  var suits = ['hearts', 'clubs', 'spades', 'diamonds']
-  var ranks = ['ace', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'jack', 'queen', 'king']
-
   var myDeckOfCards = []
   var i = 0
   // for (var i = 0; i < 53; i++) {
     for(rank in ranks){
       for (var suit in suits) {
         myDeckOfCards[i] = ranks[rank] + ' of ' + suits[suit]
-        console.log(i);
+        //console.log(i);
         console.log(myDeckOfCards[i]);
         i++
       }
@@ -40,7 +37,7 @@ function createDeck(suits, ranks) {
   return myDeckOfCards
 }
 
-var deckOfCards = createDeck()
+var deckOfCards = createDeck(suits, ranks)
 console.log(deckOfCards);
 
 /*

@@ -29,7 +29,20 @@ Test out your constructor by creating a new card, `console.log`ing it to make su
 
 */
 
+function Card(suit, rank, score) {
+    randomSuit = Math.floor(Math.random() * 4)
+    randomRank = Math.floor(Math.random() * 13)
+    var suits = ['hearts', 'clubs', 'spades', 'diamonds']
+    var ranks = ['ace', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'jack', 'queen', 'king']
 
+    this.suit = suit || suits[randomSuit]
+    this.rank = rank || ranks[randomRank]
+    this.score = score || (randomRank + 1)
+    this.title = this.rank + ' of ' + this.suit
+  }
+
+var newCard = new Card()
+console.log(newCard);
 
 /*
 
@@ -39,8 +52,30 @@ Your deck should contain a method called `createNewDeck` that will populate the 
 
 */
 
+function deckOfCards(ranks, suits) {
+  this.cards = []
+  console.log('deck of cards creation');
+  this.createNewDeck = function(){
+    var i = 0
+    console.log('Card length:');
+     if(this.cards.length === 0)
+     {
+      console.log('in the if');
+      for (var rank in ranks) {
+        for (var suit in suits) {
+          this.cards[i] = ranks[rank] + ' of ' + suits[suit]
+          i++
+        }
+      }
+     }
+    return this.cards
+  }
+}
 
-
+var hand1 = new deckOfCards(ranks, suits)
+var hand2 = new deckOfCards(ranks, suits)
+console.log(hand1.createNewDeck());
+console.log(hand2.createNewDeck());
 /*
 
 Write a constructor function called player. A player should have a username that is a string and a hand that is an array of cards.
@@ -49,8 +84,17 @@ Instantiate two instances of your player object.
 
 */
 
+function player(username, hand) {
+  this.username = username
+  this.hand = hand
+}
 
 
+var myCards = new player('Jolene', hand1.cards)
+var yourCards = new player('Rich', hand2.cards)
+
+console.log(myCards);
+console.log(yourCards);
 /*
 
 Get pumped:
