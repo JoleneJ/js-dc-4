@@ -15,16 +15,19 @@ Get the DOM nodes for the table of contents and the article body and save them b
 
 */
 
+var tableContents = document.querySelector('#table-of-contents')
+var article = document.querySelector('#article-body')
 
-
+console.log(tableContents);
+console.log(article);
 /*
 
 get an array of every heading in the document and store them in a variable called documentHeadings
 
 */
 
-
-
+var documentHeadings = document.getElementsByTagName('h2')
+console.log(documentHeadings);
 /*
 
 To generate our table of contents we need to do a couple of things:
@@ -34,8 +37,17 @@ To generate our table of contents we need to do a couple of things:
 
 */
 
+var list = document.createElement('OL')
 
+for (var i = 0; i < documentHeadings.length; i++) {
+   var item = document.createElement('LI')
+   var table = documentHeadings[i].innerText
+   var text = document.createTextNode(table)
+   item.appendChild(text)
+   list.appendChild(item)
+}
 
+tableContents.append(list)
 /*
 
 Bonus, make each item of the ToC a link to that heading on the page.
