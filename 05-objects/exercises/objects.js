@@ -35,7 +35,7 @@ executed before moving on!
 //     console.log( 'Hello, ' + (name || 'you') + '! Hope you are well!' )
 //   }
 // }
-
+// console.log(Person);
 
 /*
 
@@ -46,18 +46,18 @@ executed before moving on!
 // Getting values from our object
 // Person['first name'] // Bracket notation
 // Person.lastName // Dot notation
-
-// Setting values from our object (with reassignment)
+//
+// // Setting values from our object (with reassignment)
 // Person.favoriteColors = 'just green'
 // Person.height.feet = 10
 // Person['height']['inches'] = 6
-
+//
 // console.log( Person.height )
-
-// Calling methods
+//
+// // Calling methods
 // Person.sayHello()
-
-// Creating new methods
+//
+// // Creating new methods
 // Person.grow = function( inches ) {
 //   var currentHeight = Person.height.feet * 12 + Person.height.inches + inches
 //
@@ -67,7 +67,7 @@ executed before moving on!
 //   }
 //
 // }
-//
+// //
 // console.log( Person.height )
 // console.log( Person.grow( 1 ) )
 // console.log( Person.height )
@@ -87,7 +87,7 @@ executed before moving on!
 // }
 //
 // console.log( jsonData.Foods[1] ) // {"name":"apple", "color":"red", "price": 0.78}
-
+//
 
 /*
 
@@ -142,16 +142,17 @@ function Car ( model, make, year, color ) {
 
 }
 
-var MyCarolla = new Car('Carolla', 'Toyota', 2016, 'Red' )
-
-var MyPrius = new Car()
-MyPrius.model = 'Prius'
-MyPrius.make = 'Toyota'
-MyPrius.year = 2009
-MyPrius.color = 'Grey'
-
-console.log( MyCarolla )
-console.log( MyPrius )
+var MyCorolla = new Car('Carolla', 'Toyota', 2016, 'Red' )
+console.log(MyCorolla);
+//
+// var MyPrius = new Car()
+// MyPrius.model = 'Prius'
+// MyPrius.make = 'Toyota'
+// MyPrius.year = 2009
+// MyPrius.color = 'Grey'
+//
+// console.log( MyCarolla )
+// console.log( MyPrius )
 
 // Part 3
 // var Car = function( model, make, year, color ) {

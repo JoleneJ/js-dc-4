@@ -20,3 +20,14 @@ Apple, Red, 0.78
 Nuts, Brown, 2.23
 
 */
+
+var myJSON = require('./data.json')
+
+console.log(myJSON['Store Name'] + "'s Current Stock");
+
+var storeItems = Object.keys(myJSON.Foods[0])
+console.log(storeItems.join(', '));
+
+for (var i = 0; i < myJSON.Foods.length; i++) {
+  console.log( myJSON.Foods[i].name + ', ' + myJSON.Foods[i].color + ', ' + myJSON.Foods[i].price )
+}

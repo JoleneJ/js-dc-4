@@ -100,8 +100,8 @@
 // A. `for` loops
 
 // A basic `for` loop
-// for (var i = 0; i < 5; i++) {
-//   console.log( i )
+// for(var i = 0; i < 10; i++){
+//   console.log(i);
 // }
 
 // A basic `for` loop with an array
@@ -115,14 +115,20 @@
 //     console.log( 'B' )
 //   } else if ( grades[i] >= 70 ) {
 //     console.log( 'C' )
-//   } else {
+//   } else if( grades[i] >= 60) {
 //     console.log( 'D' )
+//   } else {
+//     console.log('F');
 //   }
 //
 // }
 
 // A more condensed `for` loop for working with arrays
 // var grades = [87, 95.5, 40, 79, 20]
+//
+// // for(i in grades){
+// //   console.log(i, grades[i]);
+// // }
 //
 // for ( grade in grades ) {
 //
@@ -140,6 +146,13 @@
 
 
 // B. `while` loops
+
+// var x = 15
+// while(x >=10){
+//   console.log(x);
+//   x--
+// }
+
 
 // A basic `while loop`
 // console.log( 'while loop' )
@@ -160,7 +173,7 @@
 //   console.log( i )
 //   i++
 // } while ( i < 0 );
-
+//
 // var j = 0
 // while ( j < 0 ) {
 //   console.log( j )

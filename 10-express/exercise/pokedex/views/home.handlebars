@@ -1,1 +1,11 @@
-<h1>Example App: {{title}} </h1>
+<h1>Pokedex</h1>
+
+{{#if pokemon}}
+<ul>
+  {{#each pokemon}}
+  <li>
+    <a href="/pokemon/{{this.id}}" >{{this.name}}</a>
+  </li>
+  {{/each}}
+</ul>
+{{/if}}

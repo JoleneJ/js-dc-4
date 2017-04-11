@@ -19,7 +19,11 @@ Hint: think about DOM methods that we can call on DOM elements we've already pul
 
 */
 
+var gallery = document.querySelector('.js-gallery')
+var images = document.querySelectorAll('.js-gallery-item')
 
+console.log(gallery);
+console.log(images);
 
 
 /*
@@ -33,7 +37,10 @@ To start, create a variable called slideCount that is equal to the number of sli
 To get the width, try getBoundingClientRect() or offsetWidth.
 
 */
+var slideCount = images.length
+var slideWidth = images[0].clientWidth
 
+console.log(slideWidth);
 
 
 /*
@@ -51,7 +58,11 @@ Create a function called transitionSlide that, for now, just `console.log`'s 'Ca
 
 */
 
-
+// function transitionSlide() {
+//   console.log('Called');
+// }
+//
+// setInterval(transitionSlide, 1)
 
 /*
 
@@ -73,13 +84,26 @@ Inside transitionSlide() we need to do two things:
 Hint: delta should always be a negative number
 */
 
+// var currentSlide = 1
+//
+// function transitionSlide() {
+//   if (currentSlide < slideCount) {
+//     gallery.style.transform = 'translateX(-' + (slideWidth * currentSlide) + 'px)'
+//     currentSlide++
+//   } else {
+//     gallery.style.transform = 'translateX(0)'
+//     currentSlide = 1
+//   }
+// }
 
+//var setInterval = setInterval(transitionSlide, 1)
 /*
 
 Step 5:
 To setup - we need to comment out the timer we created in Step 3 and our transitionSlide function in Step 4. We don't need our timer anymore and we're goinog to rewrite our transitionSlide function below! Whoo hoo!
 
 */
+
 
 
 /*
@@ -91,7 +115,11 @@ Create a variable called sliderNav and assign it to the .js-nav-list element. Th
 
 */
 
+var sliderNav = document.querySelector('.js-nav-list')
 
+console.log(sliderNav);
+
+sliderNav.addEventListener('click', transitionSlide)
 
 /*
 
@@ -117,3 +145,20 @@ Then translate your slide, just like we did last time. Just like we did last tim
 
 
 */
+var currentSlide = 1
+
+function transitionSlide(e) {
+  e.preventDefault()
+  var currentDirection = e.target.dataset.direction
+  console.log(currentDirection);
+
+  if ((currentSlide === 1) && (currentDirection === 'left')) return
+  if ((currentSlide === slideCount) && (currentDirection === 'right')) return
+  if (currentDirection === 'left') {
+    currentSlide--
+  } else {
+    currentSlide++
+  }
+
+  gallery.style.transform = 'translateX(-' + ((currentSlide - 1) * slideWidth) + 'px)'
+}

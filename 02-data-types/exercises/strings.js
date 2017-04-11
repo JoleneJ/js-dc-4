@@ -25,9 +25,9 @@
 //
 
 // console.log( 'hello ' + 'world' )
-
+//
 // console.log( 'I have ' + 20 + ' dogs!' )
-
+//
 // console.log( 20 + '16' )
 
 //
@@ -45,8 +45,9 @@
 //
 
 // 1. Concatenate your first and last name into a single string and console.log it
+console.log('Jolene ' + 'Johnson')
 // 2. Using `.charAt()` concatenate the 3rd, 5th and 1st letters of your full name together and console.log it
-
+console.log('Jolene'.charAt(2) + 'Jolene'.charAt(4) + 'Jolene'.charAt(0));
 
 
 /**

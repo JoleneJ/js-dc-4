@@ -40,7 +40,7 @@
 //
 
 // True
-// console.log ( 1 == 1 ) // => true
+// console.log ( 1 === '1' ) // => true
 
 // False
 // console.log( 4 < 2 ) // => false

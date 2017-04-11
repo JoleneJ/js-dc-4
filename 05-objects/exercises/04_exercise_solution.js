@@ -47,8 +47,8 @@ Test out your constructor by creating a new card, `console.log`ing it to make su
 function Card ( suit, rank ) {
   this.suit = suit
   this.rank = rank
-  this.title = rank + ' of ' + suit 
-  this.score = rankScores[ rank ] 
+  this.title = rank + ' of ' + suit
+  this.score = rankScores[ rank ]
 }
 
 var aceOfHearts = new Card( suits[0], ranks[0] )
@@ -75,8 +75,9 @@ function Deck (  ) {
     }
 
     return deck
+    console.log(deck);
   }
-  
+
   this.cards = this.createNewDeck()
 
   this.dealHand = function( length ) {
@@ -86,13 +87,13 @@ function Deck (  ) {
     }
 
     var handLength = length || 1
-    
+
     if ( handLength === 1 ) {
-      
+
       return this.cards[ Math.random() * this.cards.length ]
 
     } else {
-      
+
       var hand = []
 
       for (var i = 0; i < handLength; i++) {

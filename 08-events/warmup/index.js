@@ -19,6 +19,10 @@ Hint: think about DOM methods that we can call on DOM elements we've already pul
 
 */
 
+var gallery = document.querySelector('.js-gallery')
+var slides = gallery.querySelectorAll('.js-gallery-item')
+console.log(gallery);
+console.log(slides);
 
 
 /*
@@ -33,12 +37,14 @@ To get the width, try getBoundingClientRect() or offsetWidth.
 
 */
 
-
+var slideCount = slides.length
+var slideWidth = slides[0].offsetWidth
+console.log(slideWidth);
 
 /*
 
 Step 3:
-We need to set a timer to run ever 5 seconds. There are many ways to set timers with JavaScript, the one we care about here is the setInterval() function.
+We need to set a timer to run every 5 seconds. There are many ways to set timers with JavaScript, the one we care about here is the setInterval() function.
 
 setInterval() takes two arguments: a reference to a function and the interval in milliseconds between when setInterval should call that function.
 
@@ -50,7 +56,24 @@ Create a function called transitionSlide that, for now, just `console.log`'s 'Ca
 
 */
 
+var currentSlide = 1
 
+function transitionSlide() {
+  //console.log('Called');
+
+  if(currentSlide < slideCount){
+    gallery.style.transform = "translateX(-" + slideWidth * currentSlide + "px)"
+  //  console.log(gallery.style.transform);
+    currentSlide++
+  }else {
+    gallery.style.transform = "translateX(0)"
+  //  console.log(gallery.style.transform);
+    currentSlide = 1
+  }
+
+}
+
+setInterval(transitionSlide, 1000)
 
 /*
 

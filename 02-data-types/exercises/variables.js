@@ -19,28 +19,27 @@
 //
 
 // A. Declaring a variable
-// var myFirstVariable
+var myFirstVariable
 
 // B. Assigning a value to a variable
-// myFirstVariable = 'Hello World'
+myFirstVariable = 'Hello World'
 
 // Combined:
-// var mySecondVariable = 'Hello Moon'
+var mySecondVariable = 'Hello Moon'
 
 
 
 //
 // 2. Invoking/Calling our variables
 //
-// console.log( myFirstVariable ) // => 'Hello World'
-
+console.log( myFirstVariable ) // => 'Hello World'
 
 
 //
 //3. Checking type with typeof()
 //
-// var a = 1
-// console.log( typeof( a ) ) // => 'number'
+var a = 1
+console.log( typeof( a ) === 'number' ) // => 'number'
 
 // var b = 'hey'
 // console.log( typeof( b ) ) // => 'string'
@@ -56,16 +55,18 @@
 //
 //4. Type conversion
 //
-// var e = 5
-// console.log( typeof( e ) ) // => 'number'
-// e = e.toString()
-// console.log( typeof( e ) ) // => 'string'
-// e = parseInt(e)
-// console.log( typeof( e ) ) // => 'number'
-// e = e + '0'
-// console.log( typeof( e ), e ) // => 'string' 50
-// e = undefined
-// console.log( typeof( e ) ) // => 'undefined'
+var e = 5
+console.log( typeof( e ) ) // => 'number'
+e = e.toString() // '5'
+console.log( typeof( e ) ) // => 'string'
+e = parseInt(e)
+console.log( typeof( e ) ) // => 'number'
+
+//coercion
+e = e + '0'
+console.log( typeof( e ), e ) // => 'string' 50
+e = undefined
+console.log( typeof( e ) ) // => 'undefined'
 
 
 //
@@ -73,10 +74,20 @@
 //
 
 // 1. Save a string into a variable and console.log it
+var myVar = 'Jolene'
+console.log(myVar);
 // 2. Save a number into a variable and console.log it
+var myNum = 5
 // 3. Save a boolean into a variable and console.log it
+var myBoo = true
 // 4. Add two numbers together and save the result to a variable
+var myAdd = 1+1
 // 5. Declare a variable and assign a string of your first name to it; declare another variable and assign a string of your last name to it; declare a third variable and assign it the value of the first variable + the second variable and console.log it
+var first = 'Jolene'
+var last = 'Johnson'
+var name = first + ' ' + last
+
+console.log(name);
 
 /**
  * ES2015

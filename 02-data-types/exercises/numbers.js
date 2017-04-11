@@ -16,19 +16,19 @@
 // // Addition:
 // console.log( 'Addition:' )
 // console.log( 1 + 1 ) // => 2
-
+//
 // // Subtraction:
 // console.log( 'Subtraction:' )
 // console.log( 2 - 5 ) // => -3
-
+//
 // // Division:
 // console.log( 'Division:' )
 // console.log( 5 / 1 ) // => 2.5
-
+//
 // // Multiplication:
 // console.log( 'Multiplication:' )
 // console.log( 6 * 2 ) // => 12
-
+//
 // // Modulo/Remainder:
 // console.log( 'Modulo:' )
 // console.log( 10 % 2 ) // => 0
@@ -39,7 +39,7 @@
 //  2. Special Math Operators
 //
 
-// Absolute value
+//Absolute value
 // console.log( 'Absolute value:' )
 // console.log( Math.abs( 12.234 ) )
 // console.log( Math.abs( 0.1 + 0.2 ) )
@@ -47,12 +47,12 @@
 // Power
 // console.log( 'Power:' )
 // console.log( Math.pow( 3, 2 ) ) // => 9
-
-// Square root
+//
+// // Square root
 // console.log( 'Square root:' )
 // console.log( Math.sqrt( 4 ) ) // => 2
-
-// Random Number
+//
+// // Random Number
 // console.log( 'Random Number:' )
 // console.log( Math.random() ) // => 0.229375290430
 
