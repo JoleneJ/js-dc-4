@@ -1,14 +1,14 @@
 var mongoose = require('mongoose')
 var Schema = mongoose.Schema
 
-var postSchema = new Schema({
-  postUrl: String,
+var ArticleSchema = new Schema ({
   author: String,
   title: String,
   description: String,
+  url: String,
   comments: Array
 })
 
-var Post = mongoose.model( 'Post', postSchema )
+var Article = mongoose.model('Article', ArticleSchema)
 
-module.exports = Post
+module.exports = Article
