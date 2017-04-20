@@ -1,4 +1,5 @@
-var express = require('express');
+// require dependencies
+var express = require('express')
 var bodyParser = require('body-parser')
 var hbs = require('express-handlebars')
 var mongoose = require('mongoose')
@@ -16,6 +17,7 @@ app.use(express.static('public'))
 
 app.use(bodyParser.urlencoded({extended: true}))
 
+<<<<<<< HEAD
 // var testArticle = new Article({
 //   url: 'www.google.com',
 //   author: 'Jolene',
@@ -64,4 +66,50 @@ app.get('/article/:id', function (req, res) {
 
 
 //run on port 3000
+// =======
+// // application routes (i.e. controller)
+// app.get('/', function( req, res ) {
+//   // index route
+//   // list every article
+//
+//   Article.find({}, function( err, articles ) {
+//
+//     res.render('index', { articles: articles })
+//
+//   })
+//
+// })
+//
+// app
+//   .get('/article/new', function( req, res ) {
+//     // new view
+//     // render template for creating a new article
+//
+//     res.render('new')
+//
+//   })
+//   .post('/article/new', function( req, res ) {
+//     // create a new article in the DB
+//     // render show view for new article
+//
+//     var newArticle = new Article({
+//       url: req.body.url,
+//       author: req.body.author,
+//       title: req.body.title,
+//       description: req.body.description
+//     })
+//
+//     newArticle.save()
+//
+//     res.redirect('/')
+//
+//   })
+//
+//   app.get('/article/:id', function( req, res ) {
+//     // show route
+//     // show details for a specific/single article
+//   })
+//
+// // run on port 3000
+// >>>>>>> 86bdae2106f563dd4d24d0964e09ffd52c293d38
 app.listen(3000)
