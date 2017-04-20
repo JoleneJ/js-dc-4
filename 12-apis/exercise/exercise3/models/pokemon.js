@@ -4,5 +4,6 @@ var Schema = mongoose.Schema
 var pokemonName = new Schema({
   name: String,
   base_experience: String,
-  height: Number
+  height: Number,
+  moves: Array
 })
