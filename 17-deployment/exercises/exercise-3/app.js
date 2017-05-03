@@ -6,7 +6,7 @@ var bodyParser = require('body-parser')
 
 
 // Setup connection to MongoDB using Mongoose
-mongoose.connect('mongodb://clovett:tunrdb@ds117821.mlab.com:17821/tunr-db')
+mongoose.connect('mongodb://tunrUser:general1919@ds047468.mlab.com:47468/tunr')
 
 
 var Artist = require('./models/artists')
